@@ -41,5 +41,3 @@ class MessengerUITests: XCTestCase {
         }
     }
 }
-
-// test
