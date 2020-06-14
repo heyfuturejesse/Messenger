@@ -14,16 +14,16 @@ final class DatabaseManager {
     static let shared = DatabaseManager()
     
     private let database = Database.database().reference()
-    }
+}
 
 // MARK: - Account Mgmt
-    
+
 extension DatabaseManager {
     
     
     public func userExists(with email: String,
                            completion: @escaping ((Bool) -> Void)) {
-    
+        
         var safeEmail = email.replacingOccurrences(of: ".", with: "-")
         safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
         
@@ -56,6 +56,6 @@ struct ChatAppUser {
         return safeEmail
     }
     
-// let profilePictureURL: String
+    // let profilePictureURL: String
     
 }

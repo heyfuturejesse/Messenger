@@ -114,8 +114,8 @@ class RegisterViewController: UIViewController {
                                                             action: #selector(didTapRegister))
         
         registerButton.addTarget(self,
-                              action: #selector(registerButtonTapped),
-                              for: .touchUpInside)
+                                 action: #selector(registerButtonTapped),
+                                 for: .touchUpInside)
         
         
         emailField.delegate = self
@@ -141,7 +141,7 @@ class RegisterViewController: UIViewController {
     }
     
     @objc private func didTapChangeProfilePic(){
-         presentPhotoActionSheet()
+        presentPhotoActionSheet()
         
     }
     
@@ -158,13 +158,13 @@ class RegisterViewController: UIViewController {
         imageView.layer.cornerRadius = imageView.width/2.0
         
         firstNameField.frame = CGRect(x: 30,
-                                  y: imageView.bottom+10,
-                                  width: scrollView.width-60,
-                                  height: 52)
+                                      y: imageView.bottom+10,
+                                      width: scrollView.width-60,
+                                      height: 52)
         lastNameField.frame = CGRect(x: 30,
-                                  y: firstNameField.bottom+10,
-                                  width: scrollView.width-60,
-                                  height: 52)
+                                     y: firstNameField.bottom+10,
+                                     width: scrollView.width-60,
+                                     height: 52)
         emailField.frame = CGRect(x: 30,
                                   y: lastNameField.bottom+10,
                                   width: scrollView.width-60,
@@ -174,9 +174,9 @@ class RegisterViewController: UIViewController {
                                      width: scrollView.width-60,
                                      height: 52)
         registerButton.frame = CGRect(x: 30,
-                                   y: passwordField.bottom+10,
-                                   width: scrollView.width-60,
-                                   height: 52)
+                                      y: passwordField.bottom+10,
+                                      width: scrollView.width-60,
+                                      height: 52)
     }
     
     @objc private func registerButtonTapped() {
@@ -224,7 +224,7 @@ class RegisterViewController: UIViewController {
             })
         })
         
-
+        
     }
     
     func alertUserLoginError(message: String = "Please enter all information to create a new account.") {
@@ -281,7 +281,7 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
                                             handler: { [weak self]_ in
                                                 
                                                 self?.presentPhotoPicker()
-    }))
+        }))
         present(actionSheet, animated: true)
     }
     
