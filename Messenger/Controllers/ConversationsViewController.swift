@@ -32,7 +32,5 @@ class ConversationsViewController: UIViewController {
         }
     }
     
-    
-
 }
 
