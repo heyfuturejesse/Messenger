@@ -56,7 +56,7 @@ extension DatabaseManager {
                     return
                 }
                 
-
+                
                 
                 self.database.child("users").observeSingleEvent(of: .value, with: { snapshot in
                     if var usersCollection = snapshot.value as? [[String: String]] {
@@ -98,8 +98,8 @@ extension DatabaseManager {
                 })
                 
                 
-            })
-        }
+        })
+    }
     
     public func getAllUsers(completion: @escaping (Result<[[String: String]], Error>) -> Void) {
         database.child("users").observeSingleEvent(of: .value, with: { snapshot in
@@ -115,22 +115,22 @@ extension DatabaseManager {
     public enum DatabaseError: Error {
         case failedToFetch
     }
-        // DB Structure
-        /*
-         users =>[
-            [
-         "name":
-         "safe_email":
-         ],
-         [
-            "name":
-            "safe_email":
-            ]
-         ]
-         */
+    // DB Structure
+    /*
+     users =>[
+     [
+     "name":
+     "safe_email":
+     ],
+     [
+     "name":
+     "safe_email":
+     ]
+     ]
+     */
     
     
-    }
+}
 struct ChatAppUser {
     let firstName: String
     let lastName: String

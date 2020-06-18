@@ -36,9 +36,9 @@ class ProfileViewController: UIViewController {
         let path = "images/"+filename
         
         let headerView = UIView(frame: CGRect(x: 0,
-                                        y: 0,
-                                        width: self.view.width,
-                                        height: 300))
+                                              y: 0,
+                                              width: self.view.width,
+                                              height: 300))
         
         headerView.backgroundColor = .link
         
@@ -79,7 +79,7 @@ class ProfileViewController: UIViewController {
                 let image = UIImage(data: data)
                 imageView.image = image
             }
-            }).resume()
+        }).resume()
     }
     
     

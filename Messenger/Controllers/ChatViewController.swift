@@ -28,9 +28,9 @@ class ChatViewController: MessagesViewController {
     
     private let selfSender = Sender(photoURL: "",
                                     senderId: "1",
-                                    displayName: "Joe Smith")
+                                    displayName: "Jay Russ")
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,17 +41,17 @@ class ChatViewController: MessagesViewController {
         messages.append(Message(sender: selfSender,
                                 messageId: "1",
                                 sentDate: Date(),
-                                kind: .text("Hello World Message, Hello World Message, Hello World Message, Hello World Message, Hello World Message, ")))
+                                kind: .text("Hello World Message, this is what a message will look like.")))
         
         view.backgroundColor = .red
         
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
-
-
+        
+        
     }
-
+    
 }
 
 
